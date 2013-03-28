@@ -10,11 +10,10 @@ $pearChannel = $argv[8];
 $src = realpath(__DIR__ . "/../src/mg/$name");
 $installPath = "/$name";
 
-print_r($argv);
-exit;
+echo '<?xml version="1.0" encoding="UTF-8"?>'."\n\n";
 
 ?>
-<?xml version="1.0" encoding="UTF-8"?>
+
 <package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
  <name><?php echo $name; ?></name>
  <channel><?php echo $pearChannel; ?></channel>
