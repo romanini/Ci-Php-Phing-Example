@@ -130,10 +130,6 @@
   <target name="_package">
     <mkdir dir="${package.output.dir}"/>
     <exec
-      command="${pear.exec} channel-discover ${pear.channel}"
-      dir="${project.basedir}" passthru="true"
-    />
-    <exec
       command="${genphar.exec} ${genphar.args}"
       dir="${project.basedir}"
       passthru="true"
@@ -147,7 +143,6 @@
       command="${pear.exec} package" dir="${dir.src}" passthru="true"
     />
     <delete file="${dir.src}/package.xml" />
-    <move file="${dir.src}/${peartgz}" tofile="${dir.output}/${peartgz}" overwrite="true"/>
   </target>
 
   <target name="install-dependencies">
