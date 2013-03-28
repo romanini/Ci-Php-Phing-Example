@@ -241,7 +241,7 @@
     <delete dir="${dir.vendor}"/>
   </target>
 
-  <target name="all" depends="clean, prepare, package, report"/>
+  <target name="all" depends="clean, prepare, report"/>
   <target name="build" depends="prepare, test"/>
   <target name="test" depends="prepare, phpunit"/>
   <target name="report" depends="build, phploc, phpdoc, phpdepend, phpcs, phpmd, phpcpd"/>
