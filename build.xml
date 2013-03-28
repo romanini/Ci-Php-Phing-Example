@@ -134,15 +134,6 @@
       dir="${project.basedir}"
       passthru="true"
     />
-    <exec
-      command="${genpear.exec}" dir="${project.basedir}" passthru="true"
-      output="${dir.output}/package.xml"
-    />
-    <copy file="${dir.output}/package.xml" tofile="${dir.src}/package.xml" />
-    <exec
-      command="${pear.exec} package" dir="${dir.src}" passthru="true"
-    />
-    <delete file="${dir.src}/package.xml" />
   </target>
 
   <target name="install-dependencies">
